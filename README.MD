@@ -16,7 +16,8 @@ Follow these steps to set up and execute the test suite locally:
 * Requirements: Required libraries 'RobotFramework' and 'RobotFramework-Seleniumlibrary' are declared in the requirements.txt file
 * Results: Report.html is auto-generated and placed in the results folder. Screenshots captured are also placed in this folder and auto-attached to their corresponding step in the [log.html](results/log.html) file
 
-Report Log is hosted in the 'Github Pages' and can be accessed here: [https://ruby-leo.github.io/task-19-RobotFrameWork-Automation/results/log.html#s1-s1-s1-t1-k3-k2](https://ruby-leo.github.io/task-19-RobotFrameWork-Automation/results/log.html#s1-s1-s1-t1-k3-k2)
+Report Log is hosted in the 'Github Pages' and can be accessed here:
+[![View Report](https://img.shields.io/badge/Go_To_Execution_Report_Log-blue?style=for-the-badge)](https://ruby-leo.github.io/task-19-RobotFrameWork-Automation/results/log.html#s1-s1-s1-t1-k3-k2)
 
 ## Execution Log Screenshot:
 
