@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.1 on darwin)" generated="2026-06-01T01:34:58.642006" rpa="false" schemaversion="5">
+<suite id="s1" name="Task19-RobotFramework" source="/Users/nithya/PycharmProjects/Task19-RobotFramework">
+<suite id="s1-s1" name="Tests" source="/Users/nithya/PycharmProjects/Task19-RobotFramework/tests">
+<suite id="s1-s1-s1" name="Test Authentication" source="/Users/nithya/PycharmProjects/Task19-RobotFramework/tests/test_authentication.robot">
+<test id="s1-s1-s1-t1" name="Verify Login and Logout" line="13">
+<kw name="Open URL">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-01T01:34:58.793170" level="INFO">Opening browser 'chrome' to base url 'https://robotsparebinindustries.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-01T01:34:58.792957" elapsed="2.547210"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-01T01:35:01.340849" elapsed="0.357769"/>
+</kw>
+<doc>Launches the target browser, navigates to the application URL,
+and maximizes the window</doc>
+<status status="PASS" start="2026-06-01T01:34:58.792283" elapsed="2.906489"/>
+</kw>
+<kw name="Login With Credentials">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-01T01:35:01.699584" level="INFO">Typing text 'maria' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-01T01:35:01.699216" elapsed="0.092923"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-01T01:35:01.792557" level="INFO">Typing text 'thoushallnotpass' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-01T01:35:01.792287" elapsed="0.045754"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-01T01:35:01.838444" level="INFO">Clicking button 'Log in'.</msg>
+<arg>Log in</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-01T01:35:01.838218" elapsed="0.046162"/>
+</kw>
+<arg>maria</arg>
+<arg>thoushallnotpass</arg>
+<doc>Accepts a username and password as arguments, inputs
+them into the respective fields, and submits the login form.</doc>
+<status status="PASS" start="2026-06-01T01:35:01.698945" elapsed="0.185565"/>
+</kw>
+<kw name="Verify Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=logout</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-01T01:35:01.884918" elapsed="2.188576"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-01T01:35:04.150134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_verification.png"&gt;&lt;img src="login_verification.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=login_verification.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-01T01:35:04.073679" elapsed="0.076592"/>
+</kw>
+<doc>Validates successful authentication by waiting for the dashboard's
+'Log out' button to appear and saves a visual confirmation screenshot.</doc>
+<status status="PASS" start="2026-06-01T01:35:01.884633" elapsed="2.265730"/>
+</kw>
+<kw name="Logout">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-01T01:35:04.150771" level="INFO">Clicking button 'Log out'.</msg>
+<arg>Log out</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-01T01:35:04.150628" elapsed="0.034325"/>
+</kw>
+<doc>Clicks the log out button.</doc>
+<status status="PASS" start="2026-06-01T01:35:04.150465" elapsed="0.034606"/>
+</kw>
+<kw name="Verify Logout">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//button[text()='Log in']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-01T01:35:04.185413" elapsed="0.856704"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-01T01:35:05.122863" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="logout_verification.png"&gt;&lt;img src="logout_verification.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=logout_verification.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-01T01:35:05.042412" elapsed="0.080586"/>
+</kw>
+<doc>Validates successful logout by waiting for the Login button
+in the login page and captures a verification screenshot.</doc>
+<status status="PASS" start="2026-06-01T01:35:04.185195" elapsed="0.937903"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-06-01T01:35:05.123245" elapsed="0.082016"/>
+</kw>
+<doc>Executes the full user flow: opening the site, logging in,
+verifying the login, logging out, and confirming return to login page.</doc>
+<status status="PASS" start="2026-06-01T01:34:58.791045" elapsed="6.414327"/>
+</test>
+<doc>A test suite to verify the login and logout functionality
+of the RobotSpareBin Industries demo application using
+Robot Framework and SeleniumLibrary</doc>
+<status status="PASS" start="2026-06-01T01:34:58.666492" elapsed="6.540413"/>
+</suite>
+<status status="PASS" start="2026-06-01T01:34:58.665205" elapsed="6.543006"/>
+</suite>
+<status status="PASS" start="2026-06-01T01:34:58.645404" elapsed="6.563729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Task19-RobotFramework" id="s1" pass="1" fail="0" skip="0">Task19-RobotFramework</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Task19-RobotFramework.Tests</stat>
+<stat name="Test Authentication" id="s1-s1-s1" pass="1" fail="0" skip="0">Task19-RobotFramework.Tests.Test Authentication</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
